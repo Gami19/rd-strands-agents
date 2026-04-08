@@ -1,0 +1,27 @@
+[
+  {
+    "name": "AWS Documentation",
+    "type": "stdio",
+    "config": {
+      "command": "uvx",
+      "args": ["awslabs.aws-documentation-mcp-server@latest"]
+    }
+  },
+  {
+    "name": "Strands Agents",
+    "type": "stdio",
+    "config": {
+      "command": "uvx",
+      "args": ["strands-agents-mcp-server"]
+    }
+  },
+  {
+    "name": "Mastra",
+    "type": "stdio",
+    "config": {
+      "command": "npx",
+      "args": ["-y", "@mastra/mcp-docs-server@latest"]
+    }
+  }
+]
+

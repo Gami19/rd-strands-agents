@@ -1,0 +1,99 @@
+:root {
+  /* color */
+  --bg-surface: #0b1021;
+  --bg-elevated: #0f172a;
+  --bg-panel: #111827;
+  --bg-soft: #161f34;
+  --border: #1f2a44;
+  --border-strong: #2b3a5f;
+  --text-primary: #e5e7eb;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --accent: #7c3aed;
+  --accent-strong: #a855f7;
+  --accent-soft: rgba(124, 58, 237, 0.12);
+  --danger: #ef4444;
+  --success: #22c55e;
+  --warning: #fbbf24;
+
+  /* layout */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 12px 30px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.4);
+  --gap-sm: 8px;
+  --gap-md: 16px;
+  --gap-lg: 24px;
+  --content-width: 760px;
+
+  /* typography */
+  --font-body: 'Inter', 'SF Pro Display', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+  --line-height: 1.6;
+  --code-bg: rgba(148, 163, 184, 0.08);
+
+  /* focus */
+  --focus-ring: 0 0 0 3px rgba(124, 58, 237, 0.35);
+}
+
+[data-theme='light'] {
+  /* 将来用。現状はダークテーマ基準 */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: var(--line-height);
+  background: radial-gradient(circle at 20% 20%, rgba(124, 58, 237, 0.08), transparent 30%),
+    radial-gradient(circle at 80% 10%, rgba(56, 189, 248, 0.1), transparent 25%),
+    radial-gradient(circle at 50% 80%, rgba(59, 130, 246, 0.08), transparent 32%),
+    var(--bg-surface);
+  color: var(--text-primary);
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+textarea,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+pre,
+code {
+  font-family: var(--font-mono);
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
