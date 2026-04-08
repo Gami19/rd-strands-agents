@@ -1,0 +1,175 @@
+{
+  "generated_at_utc": "2026-03-19T06:37:32.462027+00:00",
+  "skills_root": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills",
+  "total_skills": 24,
+  "skills": [
+    {
+      "skill_id": "agent-craft",
+      "skill_name": "Skill: Agent Craft（カスタムエージェントの設計・生成）",
+      "description": "> **エージェントは「制約された専門家」— 何ができるかより何をさせないかを設計せよ**",
+      "invoke_hint": "Use when user says「カスタムエージェントを作って」「サブエージェントを作成して」",
+      "skill_md": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills/agent-craft/SKILL.md"
+    },
+    {
+      "skill_id": "data-arch",
+      "skill_name": "Skill: Data Architecture（データアーキテクチャ選定・設計・レビュー）",
+      "description": "> **アーキテクチャは技術選定ではなく、ビジネス要件から逆算して設計せよ**",
+      "invoke_hint": "Use when user says「データアーキテクチャを選定して」「DWHを設計して」「Data Meshを導入すべきか」",
+      "skill_md": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills/data-arch/SKILL.md"
+    },
+    {
+      "skill_id": "data-validation",
+      "skill_name": "Skill: Data Validation",
+      "description": "> **Garbage In, Garbage Out を防ぐ最後の砦**",
+      "invoke_hint": "Use when user says「データを検証して」「テーブルの整合性をチェックして」",
+      "skill_md": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills/data-validation/SKILL.md"
+    },
+    {
+      "skill_id": "databricks",
+      "skill_name": "Skill: Databricks（Databricks プラットフォーム設計・構築）",
+      "description": "> **Lakehouse の力を引き出す設計図を描け — Workspace からコスト最適化まで一気通貫**",
+      "invoke_hint": "Use when user says「Databricksの設計をして」「Medallion Architectureを設計して」",
+      "skill_md": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills/databricks/SKILL.md"
+    },
+    {
+      "skill_id": "databricks-cloud-arch",
+      "skill_name": "Skill: Databricks Cloud Architecture（クラウドインフラアーキテクチャ設計）",
+      "description": "> **クラウドの土台なくしてレイクハウスは建たない — ネットワーク・セキュリティ・IaC を設計せよ**",
+      "invoke_hint": "Use when user says「DatabricksのVPCを設計して」「Azure DatabricksのPrivate Linkを構成して」",
+      "skill_md": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills/databricks-cloud-arch/SKILL.md"
+    },
+    {
+      "skill_id": "decision-framework",
+      "skill_name": "Skill: Decision Framework（意思決定の構造化・記録・追跡）",
+      "description": "> **判断を属人化させるな ── プロセスで再現し、記録で組織知にせよ**",
+      "invoke_hint": "Use when user says「ADRを管理したい」「トレードオフを分析して」「リスク評価をして」",
+      "skill_md": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills/decision-framework/SKILL.md"
+    },
+    {
+      "skill_id": "delta-lake",
+      "skill_name": "Skill: Delta Lake（テーブル設計・最適化・運用）",
+      "description": "> **データレイクに ACID の堅牢性を — Delta Lake の設計から運用まで一気通貫で支援する**",
+      "invoke_hint": "Use when user says「Delta Lakeのテーブルを設計して」「Deltaテーブルを最適化して」",
+      "skill_md": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills/delta-lake/SKILL.md"
+    },
+    {
+      "skill_id": "diagram",
+      "skill_name": "Skill: Diagram (作図 & 図解生成)",
+      "description": "> **構造を可視化し、複雑さを一枚の図で制圧する**",
+      "invoke_hint": "Use when user says「図を作成して」「アーキテクチャ図を描いて」「フローチャートを作って」",
+      "skill_md": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills/diagram/SKILL.md"
+    },
+    {
+      "skill_id": "distill",
+      "skill_name": "Skill: Distill（知識蒸留 & 構造化）",
+      "description": "> **混沌を秩序に変え、暗黙知を形式知に鋳造する**",
+      "invoke_hint": "Use when user says「inbox を notes に蒸留して」「要件を構造化して」",
+      "skill_md": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills/distill/SKILL.md"
+    },
+    {
+      "skill_id": "effective-typescript",
+      "skill_name": "Skill: Effective TypeScript",
+      "description": "> **構文を知っていることと、いつ使うべきかを知っていることは別のことである**",
+      "invoke_hint": "Use when user says「TypeScriptを書いて」「型を設計して」「TSのコードをレビューして」",
+      "skill_md": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills/effective-typescript/SKILL.md"
+    },
+    {
+      "skill_id": "flow-architecture",
+      "skill_name": "Skill: Flow Architecture（フローアーキテクチャ設計・評価・進化）",
+      "description": "> **アーキテクチャは技術選定ではなく、戦略・設計・チームの三位一体で変化のフローを解放せよ**",
+      "invoke_hint": "Use when user says「フローアーキテクチャを設計して」「チームとアーキテクチャを最適化して」",
+      "skill_md": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills/flow-architecture/SKILL.md"
+    },
+    {
+      "skill_id": "front-design",
+      "skill_name": "Skill: Front Design（フロントエンドデザイン戦略・アセット生成）",
+      "description": "> **コンセプトから逆算せよ — 美しいサイトは戦略的なビジュアル設計から始まる**",
+      "invoke_hint": "Use when user says「LPを作りたい」「ウェブサイトのデザイン」「ヒーロー画像を探して」",
+      "skill_md": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills/front-design/SKILL.md"
+    },
+    {
+      "skill_id": "marketing-context",
+      "skill_name": "Skill: Marketing Context（マーケティングコンテキスト構築）",
+      "description": "> **戦略なき施策は弾を込めずに撃つようなもの — まずコンテキストを固めよ**",
+      "invoke_hint": "Use when user says「マーケティングの前提を整理して」「ペルソナを定義して」",
+      "skill_md": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills/marketing-context/SKILL.md"
+    },
+    {
+      "skill_id": "marketing-copy",
+      "skill_name": "Skill: Marketing Copy（マーケティングコピー執筆・編集）",
+      "description": "> **人を動かす言葉は「うまい文章」ではなく「正確な共感」から生まれる**",
+      "invoke_hint": "Use when user says「LPのコピーを書いて」「メールシーケンスを作って」「コピーを改善して」",
+      "skill_md": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills/marketing-copy/SKILL.md"
+    },
+    {
+      "skill_id": "pdf-convert",
+      "skill_name": "Skill: PDF → Markdown 変換 (pdf-convert)",
+      "description": "> **構造を読み解き、知識を取り込む — すべてはテキストから始まる**",
+      "invoke_hint": "Use when user says「PDFを変換して」「inboxに取り込んで」「ドキュメントをMarkdownにして」",
+      "skill_md": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills/pdf-convert/SKILL.md"
+    },
+    {
+      "skill_id": "review",
+      "skill_name": "Skill: Critical Reviewer (Review)",
+      "description": "> **Trust, but Verify — 信頼せよ、されど検証せよ**",
+      "invoke_hint": "Use when user says「ドキュメントをレビューして」「クリティカルレビューを実施して」",
+      "skill_md": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills/review/SKILL.md"
+    },
+    {
+      "skill_id": "robust-python",
+      "skill_name": "Skill: Robust Python（ロバスト Python ベストプラクティス）",
+      "description": "> **「コードは未来の開発者との非同期コミュニケーションである」**",
+      "invoke_hint": "Use when user says「Pythonを書いて」「Pythonのコードをレビューして」",
+      "skill_md": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills/robust-python/SKILL.md"
+    },
+    {
+      "skill_id": "skill-forge",
+      "skill_name": "Skill: Skill Forge（知識ソースからスキルを鋳造する）",
+      "description": "> **知識を鋳型に流し込み、再利用可能なスキルに仕上げよ**",
+      "invoke_hint": "Use when user says「スキルを作って」「新しいスキルを鋳造して」「PDFからスキルを作って」",
+      "skill_md": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills/skill-forge/SKILL.md"
+    },
+    {
+      "skill_id": "software-architecture",
+      "skill_name": "Skill: Software Architecture（ソフトウェアアーキテクチャ設計・評価・意思決定）",
+      "description": "> **すべてはトレードオフである ── 「正解」を探すな、「最も害の少ない選択」を見極めよ**",
+      "invoke_hint": "Use when user says「アーキテクチャを設計して」「アーキテクチャスタイルを選定して」",
+      "skill_md": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills/software-architecture/SKILL.md"
+    },
+    {
+      "skill_id": "story-map",
+      "skill_name": "Skill: Story Map（Jeff Patton 型ユーザーストーリーマッピング）",
+      "description": "> **ビジョンから始め、フィーチャー → エピック → ストーリーへ分解し、「誰に・何を・どの順で届けるか」を一枚の地図にする**",
+      "invoke_hint": "Use when user says「ストーリーマップを作成して」「ユーザーストーリーマッピングして」",
+      "skill_md": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills/story-map/SKILL.md"
+    },
+    {
+      "skill_id": "test",
+      "skill_name": "Skill: Unit Test（単体テスト設計・生成）",
+      "description": "> **すべてのテストが平等に作られているわけではない — 価値の高いテストだけがテスト・スイートに含める価値がある**",
+      "invoke_hint": "Use when user says「単体テストを書いて」「テストを作成して」「テストコードを生成して」",
+      "skill_md": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills/test/SKILL.md"
+    },
+    {
+      "skill_id": "ui-design",
+      "skill_name": "Skill: UI Design（UI 設計・レビュー・改善）",
+      "description": "> **デザインは芸術ではなくエンジニアリング — 制約とシステムの中で最適解を見つけよ**",
+      "invoke_hint": "Use when user says「UIを改善して」「デザインをレビューして」「配色を決めて」",
+      "skill_md": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills/ui-design/SKILL.md"
+    },
+    {
+      "skill_id": "unity-catalog",
+      "skill_name": "Skill: Unity Catalog（統合データ・AI ガバナンス設計）",
+      "description": "> **データとAIのガバナンスを一元化せよ — Unity Catalog で組織のデータ資産を統治する**",
+      "invoke_hint": "Use when user says「Unity Catalogを設計して」「カタログ戦略を決めて」",
+      "skill_md": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills/unity-catalog/SKILL.md"
+    },
+    {
+      "skill_id": "ux-psychology",
+      "skill_name": "Skill: UX Psychology（心理学に基づく UX 設計・レビュー）",
+      "description": "> **ユーザーの「なぜ」を心理学で読み解き、人間の認知に寄り添う体験を設計せよ**",
+      "invoke_hint": "Use when user says「UXを心理学的に評価して」「認知負荷を減らしたい」",
+      "skill_md": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/KC-Dev-Agents-main/.agent/skills/ux-psychology/SKILL.md"
+    }
+  ]
+}

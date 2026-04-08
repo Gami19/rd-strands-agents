@@ -1,0 +1,12 @@
+### Query AWS - Bedrock Claude Model ID
+POST http://localhost:8000/swarm
+Content-Type: application/json
+
+{
+  "query": "今後10年間のAIが雇用市場に与える潜在的な影響は何か？日本語で回答してください"
+}
+
+###
+GET http://localhost:8000/swarm/a0221009-078d-4b7e-b62f-1dbef8dab1a0
+
+###

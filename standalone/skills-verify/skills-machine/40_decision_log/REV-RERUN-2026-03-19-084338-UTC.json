@@ -1,0 +1,79 @@
+{
+  "review_id": "REV-RERUN-2026-03-19-084338-UTC",
+  "date": "2026-03-19",
+  "review_type": "rerun",
+  "target": {
+    "notes": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/standalone/skills-verify/skills-machine/20_notes/spec_distilled.md",
+    "proposal": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/standalone/skills-verify/skills-machine/30_proposal/proposal.md"
+  },
+  "summary": {
+    "overall_judgment": "Conditional",
+    "critical": 1,
+    "major": 2,
+    "minor": 2,
+    "info": 1
+  },
+  "issues": [
+    {
+      "severity": "Critical",
+      "category": "A-2: 章間整合性",
+      "location": "proposal.md §2.1 / §2.2",
+      "description": "初回リリース範囲の定義が矛盾したまま提案書に記載されている。§2.1では「機能Aのみを実装」と明記しながら、§2.2で「機能Bは要件定義段階では必須とされています」と記載し、矛盾を解消せずに両論併記している。",
+      "impact": "ステークホルダーがスコープを誤解し、契約後に機能Bの実装を要求される可能性がある。スコープ変更による追加コスト・納期遅延のリスク。",
+      "recommendation": "提案書提出前に、機能Bを初回リリースに含めるか否かをステークホルダーと合意し、合意内容を§2.1に明記する。§2.2は合意後のスコープに基づいて書き直す。",
+      "reference": "notes/spec_distilled.md#問題1: 初回リリース範囲の矛盾"
+    },
+    {
+      "severity": "Major",
+      "category": "A-3: 数値・データの妥当性",
+      "location": "proposal.md §3.1",
+      "description": "工数内訳でテスト工数4人月を明示しているが、notes では「テスト工数が明示されていない」と指摘されている。提案書で独自に4人月を算出した根拠が不明。",
+      "impact": "テスト工数の根拠が不明確なため、見積の信頼性が低下する。実際のテスト工数が4人月を超過した場合、プロジェクト全体の工数超過につながる。",
+      "recommendation": "テスト工数4人月の算出根拠（テストケース数、テスト種別ごとの工数配分、自動化率など）を§3.1に追記する。または、元資料でテスト工数を明示するよう顧客に確認を求める。",
+      "reference": "notes/spec_distilled.md#問題2: 工数内訳の不整合"
+    },
+    {
+      "severity": "Major",
+      "category": "A-1: 要件カバレッジ",
+      "location": "proposal.md 全体",
+      "description": "notes で指摘された「手順の構造化」（フロー図や箇条書きで手順を整理）が提案書に反映されていない。§3.2「フェーズ構成」は文章のみで、視覚的な構造化がない。",
+      "impact": "提案書の可読性が低下し、ステークホルダーがフェーズ間の依存関係やスケジュールを理解しにくい。評価で減点される可能性。",
+      "recommendation": "§3.2にガントチャートまたはフロー図を追加し、設計→実装→テストの流れと各フェーズの期間を視覚化する。または、箇条書きで各フェーズの成果物・完了条件を明記する。",
+      "reference": "notes/spec_distilled.md#推奨事項4: 手順の構造化"
+    },
+    {
+      "severity": "Minor",
+      "category": "A-4: 可読性・構造",
+      "location": "proposal.md §4.1",
+      "description": "「合意形成を設計フェーズ開始前に完了させます」と記載されているが、具体的な合意形成の方法（会議体、参加者、アジェンダ）が不明。",
+      "impact": "合意形成プロセスが曖昧なため、実際に合意が得られない可能性がある。",
+      "recommendation": "§4.1に合意形成の具体的な方法（例: キックオフミーティングでステークホルダー全員参加、スコープ定義書に署名）を追記する。",
+      "reference": "technical-review-examples.md: 「具体的な修正内容」を明記する原則"
+    },
+    {
+      "severity": "Minor",
+      "category": "A-4: 可読性・構造",
+      "location": "proposal.md §6.1",
+      "description": "「用語集の整備」を推奨事項に挙げているが、notes で既に用語集が作成されている。提案書で用語集を参照・活用していない。",
+      "impact": "notes の成果物が提案書に活かされておらず、作業の重複が発生する。",
+      "recommendation": "notes/spec_distilled.md の用語集を提案書の付録として添付するか、§2で用語定義を引用する。",
+      "reference": "notes/spec_distilled.md#用語集"
+    },
+    {
+      "severity": "Info",
+      "category": "B-6: テストカバレッジ",
+      "location": "proposal.md §5.1",
+      "description": "「自動化可能なテストは自動化し」と記載されているが、自動化対象のテスト種別（単体テスト、結合テスト、E2Eテスト）や自動化率の目標が不明。",
+      "impact": "テスト自動化の範囲が曖昧なため、実装フェーズで自動化方針が定まらない可能性がある。",
+      "recommendation": "§5.1に自動化対象のテスト種別と自動化率の目標（例: 単体テスト80%、結合テスト50%）を明記する。",
+      "reference": "technical-review-examples.md: B-6 Test Coverage 詳細例"
+    }
+  ],
+  "recommended_actions": [
+    "Critical と Major の問題を修正",
+    "機能Bのスコープをステークホルダーと合意し、提案書に反映",
+    "テスト工数4人月の算出根拠を明記",
+    "フェーズ構成を視覚化（ガントチャートまたはフロー図）",
+    "修正後、再度レビューを実行"
+  ]
+}

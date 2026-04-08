@@ -1,0 +1,79 @@
+{
+  "review_id": "REV-RERUN-2026-03-19-080611-UTC",
+  "date": "2026-03-19",
+  "review_type": "proposal_rerun",
+  "target_files": [
+    "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/standalone/skills-verify/skills-machine/20_notes/spec_distilled.md",
+    "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/standalone/skills-verify/skills-machine/30_proposal/proposal.md"
+  ],
+  "overall_judgment": "Conditional",
+  "summary": {
+    "critical": 1,
+    "major": 2,
+    "minor": 2,
+    "info": 1
+  },
+  "issues": [
+    {
+      "severity": "Critical",
+      "category": "A-2: Chapter Consistency",
+      "location": "proposal.md §3.2 / notes.md #NFR-001",
+      "problem": "工数内訳の再構成で提案された配分（設計3人月、実装4人月、テスト3人月＝合計10人月）が、蒸留ノートで指摘された元の矛盾（設計3人月＋実装3人月＝6人月）を解消しているが、実装工数を3人月から4人月に増やした根拠が提案書に明記されていない。",
+      "impact": "工数変更の根拠が不明確なため、ステークホルダーの承認を得られない可能性がある。",
+      "recommendation": "§3.2で「実装工数を4人月に増やした理由（統合作業1人月を明示的に追加）」を明記する。蒸留ノートの「内訳合計6人月」との差分4人月の内訳（実装+1人月、テスト+3人月）を表形式で比較提示する。",
+      "reference": "notes.md #NFR-001「内訳合計6人月が全体10人月と不整合」"
+    },
+    {
+      "severity": "Major",
+      "category": "A-1: Requirements Coverage",
+      "location": "proposal.md §3.1",
+      "problem": "蒸留ノートで指摘された「機能Bの範囲が未定義」という問題に対し、提案書では「第2フェーズで範囲を再定義」としているが、機能Bの概要定義を「いつ」「誰が」実施するかが不明確。§4.1で「機能Bの概要定義を実施」とあるが、これが第2フェーズなのか初回リリース前なのか曖昧。",
+      "impact": "機能Bの要件定義タイミングが不明確なため、第2フェーズの計画が遅延するリスクがある。",
+      "recommendation": "§3.1で「機能Bの概要定義は初回リリース後の第2フェーズ開始時（X月）に実施」と明記する。§4.1の記述を「機能Bの概要定義（第2フェーズ引き継ぎ資料作成）」と修正し、初回リリース範囲外であることを明確化する。",
+      "reference": "notes.md #問題3「機能B: 範囲が未定義」"
+    },
+    {
+      "severity": "Major",
+      "category": "B-2: Accounting Integrity",
+      "location": "proposal.md §3.2",
+      "problem": "工数配分の内訳で「単体テスト1人月、結合テスト1人月、受入テスト1人月」と記載されているが、§4.2で「単体テストを並行実施」とあり、実装フェーズ（4人月）と重複する可能性がある。単体テストの1人月がテストフェーズ（3人月）に含まれるのか、実装フェーズに含まれるのか不明確。",
+      "impact": "工数の二重計上または不足が発生し、見積もりの信頼性が低下する。",
+      "recommendation": "§3.2で「単体テストは実装フェーズ内で並行実施（実装4人月に含む）、テストフェーズ3人月は結合テスト・受入テストのみ」と明記する。または「単体テスト1人月はテストフェーズに計上し、実装フェーズは純粋な実装作業のみ」と整理する。",
+      "reference": "technical-review-examples.md「会計・数値整合性」の原則"
+    },
+    {
+      "severity": "Minor",
+      "category": "A-3: Data Validity",
+      "location": "proposal.md §3.3",
+      "problem": "用語集で「機能A」を「中核機能（詳細は要件定義書で定義）」としているが、提案書の時点で機能Aの概要すら記載されていない。蒸留ノートでも「機能A: 詳細未定義」と指摘されている。",
+      "impact": "提案書を読んだステークホルダーが機能Aの内容を理解できず、提案の妥当性を判断できない。",
+      "recommendation": "§3.3で機能Aの概要（例：「ユーザー登録・認証機能」など）を1〜2行で追記する。または§2.1で機能Aの概要を先に説明する。",
+      "reference": "notes.md 用語集「機能A: 詳細未定義」"
+    },
+    {
+      "severity": "Minor",
+      "category": "A-4: Readability",
+      "location": "proposal.md §4.1〜§4.3",
+      "problem": "各フェーズの記述が文章のみで、蒸留ノートで推奨された「箇条書きまたはフロー図での整理」が反映されていない。",
+      "impact": "読み手によって解釈が分かれる可能性があり、蒸留ノートで指摘された構造上の問題が解消されていない。",
+      "recommendation": "§4.1〜§4.3の各フェーズを番号付きリストまたは表形式で整理する。例：「1. 機能Aの詳細仕様確定（1人月）、2. 受入基準策定（0.5人月）、3. 用語集整備（0.5人月）」",
+      "reference": "notes.md #問題4「手順の未整理」"
+    },
+    {
+      "severity": "Info",
+      "category": "A-4: Readability",
+      "location": "proposal.md §6.2",
+      "problem": "「週次の進捗報告会を設定」とあるが、報告会の参加者・議題・成果物が不明確。",
+      "impact": "軽微。報告会の運用が曖昧になる可能性があるが、提案書の承認には影響しない。",
+      "recommendation": "§6.2で「週次進捗報告会（参加者：PM、開発リーダー、ステークホルダー代表、議題：進捗・リスク・課題）」と具体化する。",
+      "reference": "なし"
+    }
+  ],
+  "recommended_actions": [
+    "Critical問題（工数変更根拠の明記）を最優先で修正",
+    "Major問題（機能B定義タイミング、単体テスト工数の整理）を修正",
+    "Minor問題（機能A概要追記、フェーズ記述の構造化）を可能な範囲で改善",
+    "修正後、再度reviewスキルを実行して問題解消を確認"
+  ],
+  "reference_quote": "technical-review-examples.md: 「会計・数値整合性」では、工数の二重計上や不足を防ぐため、各フェーズの工数内訳を明確化し、合計値との整合性を検証する必要がある。"
+}

@@ -1,0 +1,11 @@
+strands-agents
+strands-agents-tools
+bedrock-agentcore
+strands-agents-tools[mem0_memory]
+strands-agents-tools[local_chromium_browser]
+strands-agents-tools[agent_core_browser]
+strands-agents-tools[agent_core_code_interpreter]
+strands-agents-tools[a2a_client]
+strands-agents-tools[diagram]
+strands-agents-tools[rss]
+strands-agents-tools[use_computer]

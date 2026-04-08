@@ -1,0 +1,143 @@
+@baseUrl = http://localhost:8000
+
+### サーバーの状態を確認
+GET {{baseUrl}}/status
+Content-Type: application/json
+
+### サーバーを起動（デフォルト設定）
+POST {{baseUrl}}/start
+Content-Type: application/json
+
+{}
+
+### サーバーを起動（カスタム設定）
+POST {{baseUrl}}/start
+Content-Type: application/json
+
+{
+  "headless": false,
+  "browser_type": "chromium",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "timeout": 60000
+}
+
+### サーバーを停止
+POST {{baseUrl}}/stop
+Content-Type: application/json
+
+### サーバーを再起動
+POST {{baseUrl}}/restart
+Content-Type: application/json
+
+{
+  "headless": false,
+  "browser_type": "chromium"
+}
+
+### ブラウザオプションを更新
+POST {{baseUrl}}/options
+Content-Type: application/json
+
+{
+  "headless": false,
+  "viewport": {
+    "width": 1366,
+    "height": 768
+  }
+}
+
+### URL 移動の実行
+POST {{baseUrl}}/query
+Content-Type: application/json
+
+{
+  "action": "navigate",
+  "url": "https://www.example.com"
+}
+
+### Google検索の実行
+POST {{baseUrl}}/query
+Content-Type: application/json
+
+{
+  "action": "search_google",
+  "value": "Python プログラミング 入門"
+}
+
+### スクリーンショット取得
+POST {{baseUrl}}/screenshot
+Content-Type: application/json
+
+### スナップショット取得
+POST {{baseUrl}}/query
+Content-Type: application/json
+
+{
+  "action": "get_snapshot"
+}
+
+### 履歴取得
+GET {{baseUrl}}/history?limit=5
+Content-Type: application/json
+
+### 自然言語クエリ - シンプルな検索
+POST {{baseUrl}}/nlp
+Content-Type: application/json
+
+{
+  "query": "Googleで天気を検索してください",
+  "take_screenshot": true
+}
+
+### 自然言語クエリ - 複数ステップ
+POST {{baseUrl}}/nlp
+Content-Type: application/json
+
+{
+  "query": "Googleでpythonについて検索して、最初のリンクをクリックしてスクリーンショットを撮影してください",
+  "take_screenshot": true,
+  "max_steps": 5
+}
+
+### 自然言語クエリ - 特定サイトの検索
+POST {{baseUrl}}/nlp
+Content-Type: application/json
+
+{
+  "query": "amazonにアクセスして、キーボードを検索してください",
+  "take_screenshot": true,
+  "max_steps": 4
+}
+
+### 自然言語クエリ - 情報収集
+POST {{baseUrl}}/nlp
+Content-Type: application/json
+
+{
+  "query": "Wikipediaにアクセスして、人工知能について調べてスクリーンショットを撮ってください",
+  "take_screenshot": true,
+  "max_steps": 4
+}
+
+### 自然言語クエリ - 複雑なシナリオ
+POST {{baseUrl}}/nlp
+Content-Type: application/json
+
+{
+  "query": "Googleにアクセスして、株価チャートを検索し、最初の結果を開いてスクリーンショットを撮影してください",
+  "take_screenshot": true,
+  "max_steps": 6
+}
+
+### 自然言語クエリ - ニュース閲覧
+POST {{baseUrl}}/nlp
+Content-Type: application/json
+
+{
+  "query": "CNNのウェブサイトにアクセスして、最新のニュース記事を1つ開いてスクリーンショットを撮ってください",
+  "take_screenshot": true,
+  "max_steps": 5
+}

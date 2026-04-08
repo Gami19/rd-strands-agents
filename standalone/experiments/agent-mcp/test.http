@@ -1,0 +1,137 @@
+### MCP Agent API Tests
+
+### Health Check
+GET http://localhost:8001/health
+
+###
+
+### Root Endpoint
+GET http://localhost:8001/
+
+###
+
+### Query AWS - Bedrock Claude Model ID
+POST http://localhost:8001/aws_documentation/query
+Content-Type: application/json
+
+{
+  "query": "BedrockのClaude 3.7 SonnetのモデルIDは？"
+}
+
+###
+
+### Query AWS - Bedrock Claude Model ID
+POST http://localhost:8001/aws-knowledge/query
+Content-Type: application/json
+
+{
+  "query": "正しいStrands Agent でA2A（Agent-to-Agent）プロトコルを使用する。pip installでまとめて"
+}
+
+###
+
+
+# Brave Search MCP Agent API Tests
+
+### Query Brave Search - Latest AI News
+POST http://localhost:8001/brave/query
+Content-Type: application/json
+
+{
+  "query": "最新の人工知能技術のニュースを検索してください"
+}
+
+###
+
+# PlayWright MCP Agent API Tests
+
+### Query PlayWright - 熊本城
+POST http://localhost:8001/playwright/query
+Content-Type: application/json
+
+{
+  "query": "熊本城 のスクリーンショットを撮って",
+  "options": {
+    "headless": true
+  }
+}
+
+### Query PlayWright 
+POST http://localhost:8001/playwright/query
+Content-Type: application/json
+
+{
+  "query": "大阪城 のスクリーンショットを撮って",
+  "options": {
+    "headless": false
+  }
+}
+
+# ArXiv MCP Agent API Tests
+
+### ArXiv論文の検索 - 論文の検索、ダウンロード
+POST http://localhost:8001/arxiv/query
+Content-Type: application/json
+
+{
+    "query": "最近の不確定原理についての論文を3件ダウンロードして教えてください。"
+}
+
+### ArXivに保存された論文の一覧表示
+POST http://localhost:8001/arxiv/query
+Content-Type: application/json
+
+{
+    "query": "これまでにダウンロードした論文の一覧を表示してください。"
+}
+
+###
+
+# Serena MCP Agent API Tests
+### Serena MCP Agent - Project Activation
+POST http://localhost:8001/serena/activate-project
+Content-Type: application/json
+
+{
+    "project_path": "C:\\Users\\admin\\Desktop\\k-ikegami\\local-mcp-server\\world_bank_mcp_server" 
+}
+
+###
+
+### Serena MCP Agent - Query( Onbording )
+POST http://localhost:8001/serena/query
+Content-Type: application/json
+
+{
+    "query": "このプロジェクトのオンボーディングを実行してください"
+}
+
+###
+
+### Serena MCP Agent - Query
+POST http://localhost:8001/serena/query
+Content-Type: application/json
+
+{
+    "query": "Serena MCP はどのようなアシスタントをしてくれるの？"
+}
+
+###
+
+### World Bank MCP Agent API Tests
+POST http://localhost:8001/world_bank/query
+Content-Type: application/json
+
+{
+    "query": "ドイツの失業率を教えて"
+}
+###
+
+### World Bank MCP Agent API Tests
+POST http://localhost:8001/financial_datasets/query
+Content-Type: application/json
+
+{
+    "query": "暗号市場のどのようなデータがわかる？"
+}
+###

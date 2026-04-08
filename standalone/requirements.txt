@@ -1,0 +1,4 @@
+strands-agents>=1.30.0
+strands-agents-tools>=0.2.22
+boto3>=1.42.71
+python-dotenv>=1.2.1

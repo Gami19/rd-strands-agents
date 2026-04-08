@@ -1,0 +1,57 @@
+### Multi-Agent A2A System テスト
+
+### ヘルスチェック
+GET http://localhost:8002/health
+
+### 個別エージェントテスト - リサーチ
+POST http://localhost:8002/agent/research/query
+Content-Type: application/json
+
+{
+  "query": "AI技術の最新トレンドについて調査してください",
+  "agent_type": "research"
+}
+
+### 個別エージェントテスト - 分析
+POST http://localhost:8002/agent/analysis/query
+Content-Type: application/json
+
+{
+  "query": "AI技術の市場動向を分析してください",
+  "agent_type": "analysis"
+}
+
+### 個別エージェントテスト - レポート
+POST http://localhost:8002/agent/report/query
+Content-Type: application/json
+
+{
+  "query": "AI技術の投資機会についてレポートを作成してください",
+  "agent_type": "report"
+}
+
+### マルチエージェントワークフローテスト
+POST http://localhost:8002/multi-agent/query
+Content-Type: application/json
+
+{
+  "query": "持続可能なエネルギー技術の市場機会について包括的な調査と分析を行い、投資レポートを作成してください",
+  "workflow": ["research", "analysis", "report"]
+}
+
+### ワークフロー実行テスト
+POST http://localhost:8002/workflow/execute
+Content-Type: application/json
+
+{
+  "query": "ブロックチェーン技術の金融業界への影響について調査してください",
+  "workflow": ["research", "analysis", "report"]
+}
+
+### エージェント設定テスト
+POST http://localhost:8002/agent/research/configure
+Content-Type: application/json
+
+{
+  "system_prompt": "あなたは高度なリサーチエージェントです。最新の技術トレンドに特化して調査を行ってください。"
+}

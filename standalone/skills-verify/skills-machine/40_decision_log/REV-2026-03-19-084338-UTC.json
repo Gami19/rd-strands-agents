@@ -1,0 +1,68 @@
+{
+  "review_id": "REV-2026-03-19-084338-UTC",
+  "date": "2026-03-19",
+  "target": {
+    "notes": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/standalone/skills-verify/skills-machine/20_notes/spec_distilled.md",
+    "proposal": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/standalone/skills-verify/skills-machine/30_proposal/proposal.md"
+  },
+  "summary": {
+    "overall_verdict": "Conditional",
+    "critical": 1,
+    "major": 2,
+    "minor": 1,
+    "info": 1
+  },
+  "issues": [
+    {
+      "severity": "Critical",
+      "category": "A-2: 章間整合性",
+      "location": "proposal.md §2.1 / notes.md BR-001",
+      "description": "提案書は「機能Aのみを実装」と断定しているが、notesでは「要件セクションでは機能Bも初回リリースに含めると記載」と矛盾が未解決のまま残っている。提案書が一方的に設計側の解釈を採用し、要件側の「機能Bも必須」を無視している。",
+      "impact": "ステークホルダーが要件書の「機能Bも初回」を期待している場合、提案が却下されるリスク。スコープ合意が取れていない状態で提案を進めると、契約後に大幅な手戻りが発生する。",
+      "recommendation": "提案書§2.1に「要件と設計の矛盾を解消するため、ステークホルダーと合意形成を実施し、初回リリース範囲を確定する」旨を明記。または、機能Bを初回に含める代替案を併記し、選択肢を提示する。",
+      "reference": "technical-review-examples.md: 「章間矛盾を検出」の例 - 開発章とスケジュール章でサブシステム数が不一致"
+    },
+    {
+      "severity": "Major",
+      "category": "B-2: 会計整合性",
+      "location": "proposal.md §3.1 / notes.md 問題2",
+      "description": "提案書は「テストフェーズに4人月を配分」と明記しているが、notesでは「テスト工数が明示されていない」と指摘されている。提案書が逆算で4人月を補完したが、元の仕様書に根拠がない数値を提案書で断定している。",
+      "impact": "顧客が「テスト4人月」の根拠を問われた際に、元の仕様書に記載がないため説明できない。見積の信頼性が低下し、契約交渉で減額を要求される可能性。",
+      "recommendation": "提案書§3.1に「テスト工数は全体工数10人月から設計・実装を差し引いた4人月と算出。詳細は設計フェーズで精緻化」と根拠を明記。または、元の仕様書にテスト工数を追記するよう顧客に確認を求める。",
+      "reference": "technical-review-examples.md: 「会計・数値整合性」- closing_flag を考慮した会計値の取得例"
+    },
+    {
+      "severity": "Major",
+      "category": "A-3: 数値・データの妥当性",
+      "location": "proposal.md §3.2",
+      "description": "提案書は「単体テスト、結合テスト、受入テスト」を実施すると記載しているが、4人月のテスト工数の内訳（各テストフェーズの配分）が不明。テスト自動化の工数も含まれているか不明確。",
+      "impact": "テストフェーズで工数超過が発生し、納期遅延またはテスト品質の低下を招く可能性。自動化工数が未計上の場合、手動テストのみで品質を担保できない。",
+      "recommendation": "提案書§3.2に「単体テスト1.5人月、結合テスト1.5人月、受入テスト1人月。自動化環境構築に0.5人月を含む」など内訳を明記。または、テスト計画書を別途作成し、提案書から参照する。",
+      "reference": "technical-review-examples.md: 「Test Coverage」- 実装の詳細ではなく結果（WHAT）を検証する例"
+    },
+    {
+      "severity": "Minor",
+      "category": "A-4: 可読性・構造",
+      "location": "proposal.md §4.1",
+      "description": "提案書§4.1「スコープ定義の矛盾」で問題を指摘しているが、具体的な解決策（誰が、いつ、どのように合意形成するか）が曖昧。「ステークホルダーと合意」とあるが、ステークホルダーの定義がない。",
+      "impact": "プロジェクト開始後、合意形成の責任者が不明確で、スコープ確定が遅延する可能性。",
+      "recommendation": "提案書§4.1に「プロジェクトマネージャー主導で、要件定義担当者・設計担当者・顧客代表を招集し、キックオフ前に合意形成ワークショップを実施」など具体的なアクションを明記。",
+      "reference": "なし"
+    },
+    {
+      "severity": "Info",
+      "category": "A-4: 可読性・構造",
+      "location": "proposal.md 全体",
+      "description": "提案書は6章構成で4000文字以内に収まっており、制約を満たしている。各節も3〜5行で簡潔にまとめられている。ただし、図表が一切ないため、視覚的な理解が困難。",
+      "impact": "文章のみの提案書は読み手の負担が大きく、理解に時間がかかる。特に工数内訳やフェーズ構成は表やガントチャートで示すべき。",
+      "recommendation": "提案書§3にガントチャートまたは工数内訳表を追加。§2にスコープ範囲を示す図（機能A/Bの関係図）を追加。notesの推奨事項「手順の構造化、フロー図の作成」を提案書にも適用。",
+      "reference": "なし"
+    }
+  ],
+  "recommended_actions": [
+    "Critical問題（章間整合性）を解決: 初回リリース範囲の合意形成プロセスを提案書に明記、または代替案を併記",
+    "Major問題（会計整合性・テスト工数内訳）を解決: テスト工数4人月の根拠と内訳を提案書に追記",
+    "Minor問題（合意形成の具体化）を解決: ステークホルダー定義と合意形成の手順を明記",
+    "修正後、rerunReviewNodeで再レビューを実施し、すべての問題が解決したことを確認"
+  ]
+}

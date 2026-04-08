@@ -1,0 +1,119 @@
+{
+  "summary": {
+    "generated_at_utc": "2026-03-19T08:55:17.202664+00:00",
+    "mode": "full",
+    "status": "fail",
+    "nodes": {
+      "distillNode": {
+        "status": "failed",
+        "artifact_exists": true
+      },
+      "proposalNode": {
+        "status": "skipped",
+        "artifact_exists": true
+      },
+      "reviewNode": {
+        "status": "skipped",
+        "artifact_exists": true
+      },
+      "rerunReviewNode": {
+        "status": "skipped",
+        "artifact_exists": true,
+        "decision_path": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/standalone/skills-verify/skills-machine/40_decision_log/REV-RERUN-2026-03-19-085218-UTC.json"
+      },
+      "recoveryNode": {
+        "status": "failed"
+      }
+    },
+    "artifacts": {
+      "notes_path": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/standalone/skills-verify/skills-machine/20_notes/spec_distilled.md",
+      "proposal_path": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/standalone/skills-verify/skills-machine/30_proposal/proposal.md",
+      "decision_path": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/standalone/skills-verify/skills-machine/40_decision_log/REV-2026-03-19-085218-UTC.json",
+      "rerun_decision_path": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/standalone/skills-verify/skills-machine/40_decision_log/REV-RERUN-2026-03-19-085218-UTC.json"
+    },
+    "failure": {
+      "failed_stage": "distillNode",
+      "error_type": "unknown",
+      "error_message": "必須セクション不足: 前提, 未確定",
+      "recovery_output": "",
+      "retry_action": "失敗ノードを最小入力で再実行"
+    },
+    "quality_gate": {
+      "status": "fail",
+      "nodes": {
+        "distillNode": {
+          "pass": false,
+          "reasons": [
+            "必須セクション不足: 前提, 未確定"
+          ],
+          "metrics": {
+            "char_count": 999,
+            "bullet_count": 19
+          }
+        },
+        "proposalNode": {
+          "pass": true,
+          "reasons": [],
+          "metrics": {
+            "char_count": 1249,
+            "section_count_h2": 6
+          }
+        },
+        "reviewNode": {
+          "pass": false,
+          "reasons": [
+            "必須キー不足: date_utc, findings, recommendations",
+            "高優先度指摘不足"
+          ],
+          "metrics": {
+            "required_keys_present": 2,
+            "has_high_priority_finding": false
+          }
+        },
+        "rerunReviewNode": {
+          "pass": false,
+          "reasons": [
+            "必須キー不足: date_utc, findings, recommendations",
+            "高優先度指摘不足"
+          ],
+          "metrics": {
+            "required_keys_present": 2,
+            "has_high_priority_finding": false
+          }
+        }
+      }
+    }
+  },
+  "graph_results": {
+    "distillNode": {
+      "stage": "distill",
+      "status": "failed",
+      "output_path": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/standalone/skills-verify/skills-machine/20_notes/spec_distilled.md",
+      "error": "必須セクション不足: 前提, 未確定"
+    },
+    "proposalNode": {
+      "stage": "proposal",
+      "status": "skipped",
+      "output_path": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/standalone/skills-verify/skills-machine/30_proposal/proposal.md",
+      "error": ""
+    },
+    "reviewNode": {
+      "stage": "review",
+      "status": "skipped",
+      "output_path": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/standalone/skills-verify/skills-machine/40_decision_log/REV-2026-03-19-085218-UTC.json",
+      "error": ""
+    },
+    "rerunReviewNode": {
+      "stage": "rerun",
+      "status": "skipped",
+      "output_path": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/standalone/skills-verify/skills-machine/40_decision_log/REV-RERUN-2026-03-19-085218-UTC.json",
+      "error": ""
+    },
+    "recoveryNode": {
+      "stage": "recovery",
+      "status": "failed",
+      "output_path": "",
+      "error": ""
+    }
+  }
+}

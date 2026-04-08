@@ -1,0 +1,65 @@
+{
+  "review_id": "REV-2026-03-19-085218-UTC",
+  "date": "2026-03-19",
+  "target": {
+    "notes": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/standalone/skills-verify/skills-machine/20_notes/spec_distilled.md",
+    "proposal": "C:/Users/admin/Desktop/k-ikegami/rd-strands-agents/standalone/skills-verify/skills-machine/30_proposal/proposal.md"
+  },
+  "summary": {
+    "overall_verdict": "Conditional",
+    "critical": 1,
+    "major": 2,
+    "minor": 1,
+    "info": 1
+  },
+  "issues": [
+    {
+      "severity": "Critical",
+      "category": "A-2: Chapter Consistency",
+      "location": "proposal.md §3.2 vs §1",
+      "description": "スケジュール記述に重大な矛盾があります。§3.2では「設計フェーズ（3ヶ月）、実装フェーズ（3ヶ月）、テストフェーズ（4ヶ月）を順次実施」と記載されていますが、これは合計10ヶ月となり、§1およびnotesの「10人月」と単位が混同されています。",
+      "impact": "工数（人月）とスケジュール（期間）の混同により、プロジェクト計画が実行不可能になります。10人月を10ヶ月と誤解すると、リソース配置が破綻します。",
+      "recommendation": "工数（人月）とスケジュール（期間）を明確に分離してください。例: 「全体工数10人月を、3ヶ月の期間で実施（平均3.3人体制）」のように記述すべきです。",
+      "reference_note": "notes/spec_distilled.md では「全体工数: 10人月」と明記されており、期間ではなく工数であることが明確です。"
+    },
+    {
+      "severity": "Major",
+      "category": "A-1: Requirements Coverage",
+      "location": "proposal.md §2.1",
+      "description": "初回リリース範囲の決定根拠が不明確です。notesでは「要件と設計で定義が矛盾」と指摘されていますが、提案書では「機能Aのみを初回リリースに含めます」と一方的に決定しています。",
+      "impact": "ステークホルダーの合意なく範囲を決定すると、プロジェクト開始後に要件変更が発生し、スケジュール遅延のリスクがあります。",
+      "recommendation": "「ステークホルダー間で合意形成を行い、初回リリース範囲を確定する」というプロセスを明記し、提案書では「推奨案: 機能Aのみ」として提示すべきです。",
+      "reference_example": "technical-review-examples.md A-1: 「RFP 要件との対応関係を明示し、未対応項目は理由を記載する」"
+    },
+    {
+      "severity": "Major",
+      "category": "B-2: Accounting Integrity",
+      "location": "proposal.md §3.1",
+      "description": "工数内訳の算出根拠が不明確です。notesでは「テスト工数: 明示されていないが、10人月に含まれる（逆算で4人月）」と記載されていますが、提案書では「テスト4人月」と断定しています。",
+      "impact": "根拠のない工数見積もりは、プロジェクト実行時に工数超過のリスクを生みます。特にテスト工数は変動が大きいため、精度の低い見積もりは危険です。",
+      "recommendation": "テスト工数の算出根拠（テストケース数、自動化率、過去実績など）を明記してください。または「テスト工数は暫定値であり、詳細計画で精緻化する」と明記すべきです。",
+      "reference_example": "technical-review-examples.md B-2: 「数値の算出根拠を明示し、暗黙の前提を排除する」"
+    },
+    {
+      "severity": "Minor",
+      "category": "A-3: Readability",
+      "location": "proposal.md §5.1",
+      "description": "「自動化率60%以上を目標とします」という記述がありますが、この数値の根拠が不明です。",
+      "impact": "根拠のない目標値は、達成可能性の評価ができず、プロジェクト計画の信頼性を低下させます。",
+      "recommendation": "自動化率の根拠（過去実績、業界標準、技術制約など）を補足するか、「初期目標値であり、詳細計画で調整する」と明記してください。"
+    },
+    {
+      "severity": "Info",
+      "category": "A-3: Readability",
+      "location": "proposal.md §6.1",
+      "description": "「即時対応が必要な事項」として列挙された項目は、notesの「推奨事項」とほぼ同一です。提案書としての付加価値が不明確です。",
+      "impact": "提案書がnotesの要約に留まり、具体的なアクションプランや優先順位付けが不足しています。",
+      "recommendation": "各推奨事項に対して、実施タイミング、担当者、成果物を明記し、アクションプランとして具体化してください。"
+    }
+  ],
+  "recommended_actions": [
+    "Critical問題（工数と期間の混同）を最優先で修正してください。",
+    "Major問題（初回リリース範囲の決定プロセス、工数算出根拠）を修正してください。",
+    "修正後、再度reviewNodeを実行し、すべての問題が解決したことを確認してください。"
+  ]
+}
