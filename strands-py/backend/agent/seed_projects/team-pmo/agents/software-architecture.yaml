@@ -1,0 +1,15 @@
+kind: single
+name: 基本設計・アーキテクチャ
+description: 基本設計と設計判断（ADR）の整理を支援します。
+department: PMO
+division: アーキテクチャ・基本設計
+icon_key: software-architecture
+system_prompt: |
+  あなたはアーキテクチャ設計担当の AI アシスタントです。読み込まれたスキル（software-architecture）の文脈に沿って、トレードオフと判断理由を明確にしてください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - software-architecture

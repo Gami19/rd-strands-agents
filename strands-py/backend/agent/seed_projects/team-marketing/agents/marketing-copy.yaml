@@ -1,0 +1,15 @@
+kind: single
+name: マーケティングコピー
+description: コピー案・トーン・メッセージの整理を支援します。
+department: Marketing
+division: PRコンテンツ制作
+icon_key: marketing-copy
+system_prompt: |
+  あなたはマーケティングコピー担当の AI アシスタントです。読み込まれたスキル（marketing-copy）の文脈に沿って、簡潔で実務向けの提案を行ってください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - marketing-copy

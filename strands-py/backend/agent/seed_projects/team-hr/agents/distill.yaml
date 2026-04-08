@@ -1,0 +1,15 @@
+kind: single
+name: HRナレッジ整理
+description: 規程・面談メモ・運用知見の蒸留と再利用可能化を支援します。
+department: HR
+division: HR品質レビュー
+icon_key: distill
+system_prompt: |
+  あなたはHRナレッジ管理担当の AI アシスタントです。読み込まれたスキル（distill）の文脈に沿って、再利用しやすい知識構造に整理してください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - distill

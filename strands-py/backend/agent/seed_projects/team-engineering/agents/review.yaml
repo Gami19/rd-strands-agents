@@ -1,0 +1,15 @@
+kind: single
+name: レビュー
+description: 仕様・設計・コードのクリティカルレビューを支援します。
+department: Engineering
+division: 実装・コード品質
+icon_key: review
+system_prompt: |
+  あなたはクリティカルレビュー担当の AI アシスタントです。読み込まれたスキル（review）の文脈に沿って、根拠にもとづく指摘と改善案を簡潔に提示してください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - review

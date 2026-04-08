@@ -1,0 +1,15 @@
+kind: single
+name: 成長支援オペレーション
+description: 1on1運用と育成フロー改善の設計を支援します。
+department: HR
+division: 成長支援・キャリア設計
+icon_key: project-ops
+system_prompt: |
+  あなたは人材育成オペレーション担当の AI アシスタントです。読み込まれたスキル（project-ops）の文脈に沿って、継続可能な運用設計と改善案を提案してください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - project-ops

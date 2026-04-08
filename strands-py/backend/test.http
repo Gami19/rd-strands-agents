@@ -1,0 +1,94 @@
+@baseUrl = http://127.0.0.1:8000
+
+### ヘルスチェック
+GET {{baseUrl}}/health
+
+### プロジェクト一覧（data/projects のディレクトリ名のみ。作成はしない）
+GET {{baseUrl}}/api/projects
+
+### プロジェクト作成（workspace サブディレクトリを作成・表示名は日本語可）
+POST {{baseUrl}}/api/projects
+Content-Type: application/json
+
+{
+  "project_id": "demo-project",
+  "display_name": "デモ用プロジェクト"
+}
+
+### プロジェクト削除（default は 403）
+# DELETE {{baseUrl}}/api/projects/demo-project
+
+### スキルカタログ（project_id で skills/dev または skills/pr を解決。省略時は developer 相当）
+GET {{baseUrl}}/api/skills/catalog?project_id=default
+
+### スキルカタログ（project_id 省略・移行互換）
+GET {{baseUrl}}/api/skills/catalog
+
+### プロジェクト更新（表示名・team_context）
+PATCH {{baseUrl}}/api/projects/default
+Content-Type: application/json
+
+{
+  "team_context": "developer"
+}
+
+### チャット（SSE ストリーム。REST Client では本文がそのまま流れて見える）
+POST {{baseUrl}}/api/chat
+Content-Type: application/json
+Accept: text/event-stream
+
+{
+  "message": "Amazon Bedrock について一言で説明して",
+  "mode": "default",
+  "project_id": "default"
+}
+
+### チャット（Skills モード・AgentSkills + file_read / file_write）
+POST {{baseUrl}}/api/chat
+Content-Type: application/json
+Accept: text/event-stream
+
+{
+  "message": "こんにちは。簡単に自己紹介して。",
+  "mode": "skills",
+  "project_id": "default"
+}
+
+### チャット（mode=orchestrate・API 互換のみ。Web UI では送信しない）
+# POST {{baseUrl}}/api/chat
+# Content-Type: application/json
+# Accept: text/event-stream
+#
+# {
+#   "message": "inbox のメモを整理して要点をまとめたい",
+#   "mode": "orchestrate",
+#   "project_id": "default"
+# }
+
+### チャット（Swarm・handoff。SSE に handoff / phase=swarm / agent=node_id）
+POST {{baseUrl}}/api/chat
+Content-Type: application/json
+Accept: text/event-stream
+
+{
+  "message": "設計レビューと改善案を段階的に進めて",
+  "mode": "swarm",
+  "project_id": "default"
+}
+
+### アップロード（multipart・.md / .pdf）— curl 例
+# curl -F "project_id=default" -F "file=@./sample.md" {{baseUrl}}/api/upload
+# PDF も inbox に保存し、JSON の ref.url で参照（サーバ側の pypdf 変換は行わない）
+
+### 成果物一覧（project_id 単位・inbox / notes / proposal / decision）
+GET {{baseUrl}}/api/projects/default/artifacts
+
+### ファイル取得（inline。?download=1 で attachment）
+GET {{baseUrl}}/api/files/default/inbox/example.md
+GET {{baseUrl}}/api/files/default/notes/memo.md?download=1
+
+### ファイル削除
+DELETE {{baseUrl}}/api/files/default/inbox/example.md
+
+### ストリーム確認例（ターミナル）
+# curl -N -H "Content-Type: application/json" -d "{\"message\":\"hi\"}" http://127.0.0.1:8000/api/chat

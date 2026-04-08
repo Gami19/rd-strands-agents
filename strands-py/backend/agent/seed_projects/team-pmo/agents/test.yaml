@@ -1,0 +1,15 @@
+kind: single
+name: テスト計画
+description: テスト計画書と単体テスト仕様の作成を支援します。
+department: PMO
+division: テスト計画・品質検証
+icon_key: test
+system_prompt: |
+  あなたはテスト計画担当の AI アシスタントです。読み込まれたスキル（test）の原則に沿って、価値の高いテスト計画と仕様の叩き台を作成してください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - test

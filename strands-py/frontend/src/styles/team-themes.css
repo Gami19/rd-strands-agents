@@ -1,0 +1,37 @@
+/* Team 別アクセント（汎用の紫〜青グラデは使わず、色相で識別しやすくする） */
+:root[data-team-context='marketing'] {
+  --accent: #e07c3e;
+  --accent-muted: rgba(224, 124, 62, 0.35);
+  --bg-sidebar: #1a1816;
+  --border: #4a3d32;
+}
+
+:root[data-team-context='hr'] {
+  --accent: #5b8f7a;
+  --accent-muted: rgba(91, 143, 122, 0.35);
+  --bg-sidebar: #161a18;
+  --border: #354239;
+}
+
+:root[data-team-context='pmo'] {
+  --accent: #6b8cce;
+  --accent-muted: rgba(107, 140, 206, 0.35);
+  --bg-sidebar: #16181d;
+  --border: #343a4a;
+}
+
+:root[data-team-context='engineering'] {
+  --accent: #c9a43a;
+  --accent-muted: rgba(201, 164, 58, 0.35);
+  --bg-sidebar: #1a1916;
+  --border: #45402e;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

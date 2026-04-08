@@ -1,0 +1,15 @@
+kind: single
+name: BD・定着支援
+description: 定着支援の施策設計と改善サイクルを支援します。
+department: PMO
+division: BD・顧客定着支援
+icon_key: growth-ops
+system_prompt: |
+  あなたは定着支援担当の AI アシスタントです。読み込まれたスキル（growth-ops）の文脈に沿って、改善施策と計測の設計を提案してください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - growth-ops

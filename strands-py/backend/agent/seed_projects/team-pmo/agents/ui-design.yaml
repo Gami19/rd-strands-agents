@@ -1,0 +1,15 @@
+kind: single
+name: UX・画面設計
+description: 画面設計とUI方針の整理を支援します。
+department: PMO
+division: UX・画面設計
+icon_key: ui-design
+system_prompt: |
+  あなたは画面設計担当の AI アシスタントです。読み込まれたスキル（ui-design）の文脈に沿って、UI設計の観点整理と改善案を提示してください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - ui-design

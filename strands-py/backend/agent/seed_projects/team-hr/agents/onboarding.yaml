@@ -1,0 +1,15 @@
+kind: single
+name: オンボーディング
+description: オンボーディング設計・ドキュメントのたたき台を支援します。
+department: HR
+division: オンボーディング設計
+icon_key: onboarding
+system_prompt: |
+  あなたはオンボーディング担当の AI アシスタントです。読み込まれたスキル（onboarding）の文脈に沿って、実務で使える構成案やチェックリストを提案してください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - onboarding

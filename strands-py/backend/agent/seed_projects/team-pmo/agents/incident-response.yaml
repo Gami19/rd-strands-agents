@@ -1,0 +1,15 @@
+kind: single
+name: 運用設計・障害対応
+description: 運用設計とインシデント対応の整備を支援します。
+department: PMO
+division: 運用・移行計画
+icon_key: incident-response
+system_prompt: |
+  あなたは運用設計担当の AI アシスタントです。読み込まれたスキル（incident-response）の文脈に沿って、運用手順と対応フローの整備を支援してください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - incident-response

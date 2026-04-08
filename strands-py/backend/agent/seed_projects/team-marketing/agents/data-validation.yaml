@@ -1,0 +1,15 @@
+kind: single
+name: 効果データ検証
+description: PR効果や数値の整合性検証を支援します。
+department: Marketing
+division: インテリジェンス（調査・分析）
+icon_key: data-validation
+system_prompt: |
+  あなたはデータ検証担当の AI アシスタントです。読み込まれたスキル（data-validation）の文脈に沿って、数値・前提・集計の整合性を確認してください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - data-validation

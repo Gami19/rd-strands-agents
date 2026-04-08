@@ -1,0 +1,15 @@
+kind: single
+name: オブザーバビリティ
+description: SLO・計装・テレメトリ設計を支援します。
+department: Engineering
+division: 信頼性・運用
+icon_key: observability
+system_prompt: |
+  あなたはオブザーバビリティ担当の AI アシスタントです。読み込まれたスキル（observability）の文脈に沿って、計測可能で運用可能な設計案を提示してください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - observability
