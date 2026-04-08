@@ -1,0 +1,185 @@
+.app {
+  display: flex;
+  height: 100%;
+  min-height: 0;
+  background: var(--bg-main);
+  color: var(--text-primary);
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.team-landing {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+.team-landing-title {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.team-landing-description {
+  margin: 0;
+  color: var(--text-secondary);
+  max-width: 72ch;
+}
+
+.team-landing-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.team-landing-select {
+  display: grid;
+  gap: 10px;
+}
+
+.team-landing-select-title {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.team-landing-muted {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.team-back-row {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 12px 0;
+}
+
+.team-back-btn {
+  min-width: 120px;
+  font-size: 12px;
+  padding: 7px 12px;
+  border-radius: 8px;
+  border: 1px solid color-mix(in srgb, var(--accent) 70%, #000);
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.team-back-btn:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--accent) 86%, #000);
+  border-color: color-mix(in srgb, var(--accent) 82%, #000);
+}
+
+.team-back-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.team-dept-groups {
+  display: grid;
+  gap: 14px;
+}
+
+.team-dept-group-title {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.team-dept-group {
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--border));
+  border-radius: 12px;
+  padding: 12px;
+  background: color-mix(in srgb, var(--bg-composer) 68%, transparent);
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+.team-division-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.team-division-group {
+  border: 1px solid color-mix(in srgb, var(--border) 85%, transparent);
+  border-radius: 10px;
+  padding: 10px;
+  background: color-mix(in srgb, var(--bg-main) 55%, transparent);
+}
+
+.team-division-group-title {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.team-dept-agent-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.team-dept-agent-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid color-mix(in srgb, var(--border) 88%, transparent);
+  border-radius: 10px;
+  padding: 10px;
+  background: color-mix(in srgb, var(--bg-elev) 85%, var(--bg-main));
+}
+
+.team-dept-agent-main {
+  min-width: 0;
+}
+
+.team-dept-agent-name {
+  font-weight: 600;
+}
+
+.team-dept-agent-desc {
+  margin: 4px 0 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.team-request-btn {
+  min-width: 80px;
+  font-size: 12px;
+  padding: 7px 12px;
+  border-radius: 8px;
+  border: 1px solid color-mix(in srgb, var(--accent) 70%, #000);
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.team-request-btn:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--accent) 86%, #000);
+  border-color: color-mix(in srgb, var(--accent) 82%, #000);
+}
+
+.team-request-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+@media (max-width: 980px) {
+  .team-division-grid {
+    grid-template-columns: 1fr;
+  }
+}

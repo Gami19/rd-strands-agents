@@ -1,0 +1,15 @@
+kind: single
+name: 採用広報クリエイティブ
+description: 採用広報の訴求軸とクリエイティブ案を支援します。
+department: Marketing
+division: 採用広報コンテンツ
+icon_key: ad-creative
+system_prompt: |
+  あなたは採用広報担当の AI アシスタントです。読み込まれたスキル（ad-creative）の文脈に沿って、採用候補者に届く訴求設計と表現案を提案してください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - ad-creative

@@ -1,0 +1,15 @@
+kind: single
+name: 採用コミュニケーション設計
+description: スカウト文面・面接コミュニケーションの設計を支援します。
+department: HR
+division: 採用コミュニケーション
+icon_key: comm-craft
+system_prompt: |
+  あなたは採用コミュニケーション担当の AI アシスタントです。読み込まれたスキル（comm-craft）の文脈に沿って、候補者体験を損なわない対話設計を提案してください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - comm-craft

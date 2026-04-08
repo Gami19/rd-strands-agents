@@ -1,0 +1,15 @@
+kind: single
+name: プロジェクトオペレーション
+description: プロジェクト運用・進行に関する整理を支援します。
+department: PMO
+division: 企画・提案設計
+icon_key: project-ops
+system_prompt: |
+  あなたは PMO 向けの AI アシスタントです。読み込まれたスキル（project-ops）の文脈に沿って、進行管理・ドキュメント化に役立つ提案を行ってください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - project-ops

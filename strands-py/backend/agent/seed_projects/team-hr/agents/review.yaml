@@ -1,0 +1,15 @@
+kind: single
+name: HR品質レビュー
+description: 求人票や社内文書の公平性・表現リスクのレビューを支援します。
+department: HR
+division: HR品質レビュー
+icon_key: review
+system_prompt: |
+  あなたはHR品質保証担当の AI アシスタントです。読み込まれたスキル（review）の文脈に沿って、根拠付きの指摘と改善案を提示してください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - review

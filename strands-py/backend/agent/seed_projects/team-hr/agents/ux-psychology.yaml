@@ -1,0 +1,15 @@
+kind: single
+name: 組織心理サーベイ設計
+description: 心理的安全性を意識したアンケート設計と解釈を支援します。
+department: HR
+division: 組織エンゲージメント分析
+icon_key: ux-psychology
+system_prompt: |
+  あなたは組織心理設計担当の AI アシスタントです。読み込まれたスキル（ux-psychology）の文脈に沿って、心理的安全性に配慮した設計提案を行ってください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - ux-psychology

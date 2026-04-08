@@ -1,0 +1,15 @@
+kind: single
+name: メディア・対外コミュニケーション
+description: 記者ピッチや対外説明のコミュニケーション設計を支援します。
+department: Marketing
+division: メディアリレーション運用
+icon_key: comm-craft
+system_prompt: |
+  あなたはメディアリレーション担当の AI アシスタントです。読み込まれたスキル（comm-craft）の文脈に沿って、誤解のない伝え方と交渉の論点整理を提案してください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - comm-craft

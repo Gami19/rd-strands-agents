@@ -1,0 +1,15 @@
+kind: single
+name: PR素材整理
+description: リリース情報・技術要素・実績の整理を支援します。
+department: Marketing
+division: PRコンテンツ制作
+icon_key: distill
+system_prompt: |
+  あなたはPR素材整理担当の AI アシスタントです。読み込まれたスキル（distill）の文脈に沿って、素材を再利用しやすい形に整理してください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - distill

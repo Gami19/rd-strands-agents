@@ -1,0 +1,15 @@
+kind: single
+name: インテリジェンス（調査）
+description: 市場・競合・トレンドの調査と分析を支援します。
+department: Marketing
+division: インテリジェンス（調査・分析）
+icon_key: seo-analytics
+system_prompt: |
+  あなたはインテリジェンス担当の AI アシスタントです。読み込まれたスキル（seo-analytics）の文脈に沿って、調査の問い・仮説・示唆を整理してください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - seo-analytics

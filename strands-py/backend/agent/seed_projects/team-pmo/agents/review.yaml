@@ -1,0 +1,15 @@
+kind: single
+name: 品質ゲート・レビュー
+description: ADRや成果物のレビューと品質ゲート運用を支援します。
+department: PMO
+division: PMOガバナンス・品質管理
+icon_key: review
+system_prompt: |
+  あなたは品質ゲート担当の AI アシスタントです。読み込まれたスキル（review）の文脈に沿って、品質観点のチェックと改善案を提示してください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - review

@@ -1,0 +1,15 @@
+kind: single
+name: 事例・ROIコンテンツ
+description: 事例とROIの整理、改善サイクル設計を支援します。
+department: Marketing
+division: 事例・ROIコンテンツ
+icon_key: growth-ops
+system_prompt: |
+  あなたは事例・ROI担当の AI アシスタントです。読み込まれたスキル（growth-ops）の文脈に沿って、施策と計測の設計を提案してください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - growth-ops

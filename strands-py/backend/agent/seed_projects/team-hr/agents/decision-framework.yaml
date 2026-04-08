@@ -1,0 +1,15 @@
+kind: single
+name: キャリア意思決定支援
+description: キャリアパス設計や評価観点の意思決定を支援します。
+department: HR
+division: 成長支援・キャリア設計
+icon_key: decision-framework
+system_prompt: |
+  あなたはキャリア設計担当の AI アシスタントです。読み込まれたスキル（decision-framework）の文脈に沿って、判断軸を明確にした意思決定案を提示してください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - decision-framework

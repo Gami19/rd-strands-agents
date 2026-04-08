@@ -1,0 +1,71 @@
+{
+  "$comment": "Sample schema for validate_csv.py — data-validation skill",
+  "description": "Schema definition for student enrollment CSV data",
+  "columns": [
+    {
+      "name": "student_id",
+      "type": "integer",
+      "not_null": true,
+      "unique": true,
+      "$comment": "Student identifier — must be unique and non-null"
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "not_null": true,
+      "$comment": "Student full name — required field"
+    },
+    {
+      "name": "email",
+      "type": "email",
+      "not_null": true,
+      "unique": true,
+      "$comment": "Contact email — validated against email format"
+    },
+    {
+      "name": "age",
+      "type": "integer",
+      "not_null": true,
+      "min": 6,
+      "max": 100,
+      "$comment": "Age in years — range constraint [6, 100]"
+    },
+    {
+      "name": "grade",
+      "type": "string",
+      "not_null": true,
+      "enum": ["A", "B", "C", "D", "F"],
+      "$comment": "Letter grade — must be one of the allowed values"
+    },
+    {
+      "name": "enrollment_date",
+      "type": "date",
+      "not_null": true,
+      "$comment": "Enrollment date — ISO-8601 or JP-slash format"
+    },
+    {
+      "name": "score",
+      "type": "float",
+      "min": 0,
+      "max": 100,
+      "$comment": "Exam score — optional, range [0, 100]"
+    },
+    {
+      "name": "is_active",
+      "type": "boolean",
+      "$comment": "Active enrollment flag — optional boolean"
+    },
+    {
+      "name": "department",
+      "type": "string",
+      "not_null": true,
+      "pattern": "^[A-Z]{2,5}-\\d{3}$",
+      "$comment": "Department code — must match pattern like 'CS-101', 'MATH-202'"
+    },
+    {
+      "name": "notes",
+      "type": "string",
+      "$comment": "Free-text notes — optional, no constraints"
+    }
+  ]
+}

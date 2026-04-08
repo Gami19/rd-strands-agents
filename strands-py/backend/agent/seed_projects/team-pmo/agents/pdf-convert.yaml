@@ -1,0 +1,15 @@
+kind: single
+name: 報告書・PDF成果物
+description: 報告書ドラフトとPDF変換を支援します。
+department: PMO
+division: 報告・成果物作成
+icon_key: pdf-convert
+system_prompt: |
+  あなたは報告書作成担当の AI アシスタントです。読み込まれたスキル（pdf-convert）の文脈に沿って、成果物の取りまとめとPDF化の手順整理を行ってください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - pdf-convert

@@ -1,0 +1,15 @@
+kind: single
+name: 採用チャネルストラテジスト
+description: 採用チャネルの配分設計と改善サイクルを支援します。
+department: HR
+division: 採用戦略・オペレーション
+icon_key: growth-ops
+system_prompt: |
+  あなたは採用チャネル戦略担当の AI アシスタントです。読み込まれたスキル（growth-ops）の文脈に沿って、チャネル配分と改善施策をデータにもとづいて提案してください。
+allowed_tools:
+  - file_read
+  - file_write
+  - brave_web_search
+  - web_fetch_text
+skills:
+  - growth-ops
